@@ -1,0 +1,52 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const siteTitle = "Escape Room Explorer: Find Your Next Adventure";
+const siteDescription = "Discover curated escape rooms around the world! Find ratings, reviews, difficulty levels, and book your next thrilling adventure.";
+---
+
+<Layout title={siteTitle} description={siteDescription}>
+	<section class="hero bg-primary text-white py-20">
+		<div class="container mx-auto text-center">
+			<h1 class="text-5xl font-bold mb-6">{siteTitle}</h1>
+			<p class="text-xl mb-8">{siteDescription}</p>
+			<a href="#map" class="bg-secondary text-primary font-bold py-3 px-8 rounded-full hover:bg-accent hover:text-white">Explore Escape Rooms</a>
+		</div>
+	</section>
+
+	<section id="map" class="py-12">
+		<div class="container mx-auto">
+			<h2 class="text-3xl font-bold mb-6 text-center">Find Escape Rooms Near You</h2>
+			<div class="map-container">
+				<img src="https://placehold.co/1200x600.png" alt="Interactive Map of Escape Rooms" data-ai-hint="interactive map showing escape room locations" />
+				<!-- Placeholder for interactive map component -->
+			</div>
+		</div>
+	</section>
+
+	<section class="py-12 bg-gray-50">
+		<div class="container mx-auto">
+			<h2 class="text-3xl font-bold mb-6 text-center">Featured Escape Rooms</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<img src="https://placehold.co/400x200.png" alt="Escape Room Image" class="mb-4 rounded-md" data-ai-hint="interior of a spooky escape room" />
+					<h3 class="text-xl font-semibold mb-2">The Haunted Mansion</h3>
+					<p class="text-gray-700">Explore a spooky mansion filled with ghosts and puzzles.</p>
+					<a href="#" class="text-primary hover:text-accent font-bold">Book Now</a>
+				</div>
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<img src="https://placehold.co/400x200.png" alt="Escape Room Image" class="mb-4 rounded-md" data-ai-hint="futuristic escape room control panel" />
+					<h3 class="text-xl font-semibold mb-2">Space Odyssey</h3>
+					<p class="text-gray-700">Embark on a thrilling space adventure to save the galaxy.</p>
+					<a href="#" class="text-primary hover:text-accent font-bold">Book Now</a>
+				</div>
+				<div class="bg-white rounded-lg shadow-md p-6">
+					<img src="https://placehold.co/400x200.png" alt="Escape Room Image" class="mb-4 rounded-md" data-ai-hint="scene from a detective-themed escape room" />
+					<h3 class="text-xl font-semibold mb-2">The Detective's Office</h3>
+					<p class="text-gray-700">Solve a mysterious crime in a classic detective setting.</p>
+					<a href="#" class="text-primary hover:text-accent font-bold">Book Now</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</Layout>
